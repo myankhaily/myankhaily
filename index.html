@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нүүр</title>
+    <style>
+        body{
+            margin:0;
+            background-color: rgb(255, 233, 233);
+        }
+        .header{
+            background-color:black;
+            width: auto;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            text-align: center;
+        }
+        .header:hover{
+            background-color: white;
+            cursor: pointer;
+            color: black;
+        }
+        .a{
+            cursor: pointer;
+            width: 35%;
+            height: 10rem;
+            background-color: rgb(189, 189, 209);
+            margin-right: 10%;
+            margin-top: 3rem;
+            float: right;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .a:hover{
+            background-color: cornflowerblue;
+        }
+        .footer{
+            background-color: khaki;
+            width: 100%;
+            height: 10%;
+        }
+        #cssDiv{
+            
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #cssContainer{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 15rem;
+            background-color: rgb(189, 189, 209);
+            margin-right: 10%;
+            margin-top: 3rem;
+            float: right;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        #htmlDiv{
+           
+            
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #htmlContainer{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 15rem;
+            background-color: rgb(189, 189, 209);
+            margin-right: 10%;
+            margin-top: 3rem;
+            float: right;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        a{
+            text-decoration: none;
+        }
+        .link:hover{
+            font-size: 5rem;
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="header">Мэдээлэл зүйн гэрийн даалгавар</div>
+    <div class="body">
+        <a href="schedule.html"><div class="a">Хичээлийн хуваарь</div></a>
+        <a href="tomyo.html"><div class="a">Томьёо</div></a>
+        <div class="a" id="CSS1" onclick="myDiv1()">CSS explanation</div>
+        <div class="a" id="HTML1" onclick="myDiv2()">HTML explanation</div>
+        <div id="cssContainer">
+            <div id="cssDiv">
+                <b><p>
+                    style tag -> tag дотроо css буюу загварыг бичдэг<br>
+                    color -> text color<br>
+                    text:align -> text ийн башршил<br>
+                    background-color -> дэвсгэр өнгө<br>
+                    font-family -> text ийн загвар өөрчилнө<br>
+                    margin -> хооронлын зайг авна<br>
+                    <span class="link">Илүү ихийг <a href="https://www.w3schools.com/css/default.asp">эндээс</a></span>
+                </p></b>
+            </div>
+        </div>
+        <div id="htmlContainer">
+            <div id="htmlDiv">
+                <b><p>
+                    !DOCTYPE html -> html5 хувилбар<br>
+                    head tag -> толгой хэсэг<br>
+                    body tag -> эх бие хэсэг (гол кодоо энд бичнэ)<br>
+                    UTF-8 -> латинаас өөр үсгийг танина<br>
+                    h1 tag -> хамгийн том гарчиг (h6 хүртэл хэмжээ нь багасна)<br>
+                    p tag -> текст бичнэ<br>
+                    div tag -> website аа хувааж table tag ийн илүү хувилбар<br>
+                    <span class="link">Илүү ихийг <a href="https://www.w3schools.com/html/default.asp">эндээс</a></span>
+                </p></b>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <script>
+        var divHTML = document.querySelector("#HTML1")
+        var divCSS = document.querySelector("#CSS1")
+        var divCont = document.querySelector("#cssContainer")
+        var divHtmlCon = document.querySelector("#htmlContainer")
+        var cssCount = 0
+        var htmlCount = 0
+        function myDiv1(){
+            cssCount++
+            if(cssCount%2==0){
+                divCont.style.display="none"
+            }else{
+                divCont.style.display="flex"
+            }
+        }
+
+        function myDiv2(){
+            htmlCount++
+            if(htmlCount%2==0){
+                divHtmlCon.style.display="none"
+            }else{
+                divHtmlCon.style.display="flex"
+            }
+        }
+    </script>
+</body>
+</html>
